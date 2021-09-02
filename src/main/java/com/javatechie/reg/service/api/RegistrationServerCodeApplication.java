@@ -22,6 +22,7 @@ public class RegistrationServerCodeApplication {
 	@PostMapping("/register")
 	public String register(@RequestBody User user) {
 		repository.save(user);
+		System.out.println("Change committed");
 		return "Hi " + user.getName() + " your Registration process successfully completed";
 	}
 
